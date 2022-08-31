@@ -8,8 +8,10 @@
 	To manage microservice we can you Spring Cloud.
 
 4) Spring Cloud Projects:
-
-  a) Spring Cloud Open Feign - For Inter microservice communication using HTTP (Open Feign provides declarative to invoke service)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+  a) Spring Cloud Open Feign
+          
+	 - For Inter microservice communication using HTTP (Open Feign provides declarative to invoke service)
           #Follow below steps to create Feign client
 	  step 1: include feign dependancy in pom.xml
 		<!-- For Feign Client -->
@@ -30,7 +32,8 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-  b) Spring Cloud Netflix Eureka - For Service discovery and Registry(Communicate using service name)
+  b) Spring Cloud Netflix Eureka 
+           - For Service discovery and Registry(Communicate using service name)
 	   #Follow below steps for setting up Netflix Eureka server and registering microservice with Eureka server
 	  step 1: include Eureka Dependency in pom.xml
 		   <dependency>
@@ -43,7 +46,8 @@
 			eureka.client.fetch-registry=false	
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-  c) Spring Cloud Load Balancer - For Client side load balancing 
+  c) Spring Cloud Load Balancer 
+           - For Client side load balancing 
 	   #Dividing load coming for perticular microservice
 	 step 1: include dependency in pom.xml
 		  <!-- For spring cloud loadbalancer -->
@@ -64,9 +68,11 @@
 		}
 -------------------------------------------------------------------------------------------------------------------------------------
 
-  d) Spring Cloud API Gateway  - For performing common login(Authentication, Request headers ,logging)
+  d) Spring Cloud API Gateway
+            - For performing common login(Authentication, Request headers ,logging)
 ------------------------------------------------------------------------------------------------------------------------------------
-  e) Fault Tolerance - If one service is down it should not impact other services
+  e) Fault Tolerance
+  		     - If one service is down it should not impact other services
                      - We are going to use Resilience4j dependency for managing failure
 		     - There are 3 state in circuit breaker Open,Close,Half Open
  		     - slidingWindowSize (How many call we want to considered)
@@ -76,11 +82,14 @@
 		     - permittedNumberOfCallsHaldOpenState
 		     
 ------------------------------------------------------------------------------------------------------------------------------------
-  f) Sleuth and Zipkin - Used for distributed tracing
+  f) Sleuth and Zipkin
+                       - Used for distributed tracing
 		       - To capture failure across multiple microservice
 		       - Format Followed : {Service-Name, TraceId(Unique across all api), SpanId(unique for a request within same service)}
 		       - Zipkin : Dashboard for log  (We need to download jar from internet)
 ------------------------------------------------------------------------------------------------------------------------------------ 
 		
-  g) Config Server - To manage enviroment specific properties 
+  g) Config Server 
+  			- To manage enviroment specific properties 
+-----------------------------------------------------------------------------------------------------------------------------------
 		    
